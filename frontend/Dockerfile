@@ -1,6 +1,6 @@
-FROM node:lts-alpine3.16 as builder
+FROM node:16.15.1-alpine as builder
 WORKDIR /app
-COPY ./      package.json ./
+COPY ./package.json ./
 RUN npm install
 COPY . .
 CMD ["npm", "run", "start"]
