@@ -1,4 +1,4 @@
-FROM node:16.15.1-alpine as builder
+FROM node:lts-alpine3.16 as builder
 WORKDIR /app
 COPY ./      package.json ./
 RUN npm install
